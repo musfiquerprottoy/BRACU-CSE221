@@ -9,5 +9,4 @@ for i in range(N):
     arr[i] = int(input())
 
 arr2 = arr[::-1]
-for j in range(N-K, N, 1): 
-    print(arr2[j], end=' ')
+print(*arr2[N-K:])

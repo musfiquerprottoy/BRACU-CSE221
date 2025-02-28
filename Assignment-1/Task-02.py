@@ -1,21 +1,18 @@
-T = int(input())  # Number of test cases
+T = int(input()) 
 
 for i in range(T): 
-    inp = input().split()  # Split the input into parts
-    num1 = float(inp[1])  # First number
-    opt = inp[2]  # Operator (+, -, *, /)
-    num2 = float(inp[3])  # Second number
+    inp = input().split()
+    num1 = float(inp[1])
+    opd = inp[2]
+    num2 = float(inp[3])
     rslt = 0
 
-    # Perform the calculation
-    if opt == '+': 
+    if opd == '+': 
         rslt = num1 + num2
-    elif opt == '-': 
+    elif opd == '-': 
         rslt = num1 - num2
-    elif opt == '*': 
+    elif opd == '*': 
         rslt = num1 * num2
-    elif opt == '/':
-        rslt = num1 / num2  # Division automatically handles float values
-
-    # Print the result with 6 decimal places
+    elif opd == '/':
+        rslt = num1 / num2 
     print(f'{rslt:.6f}')

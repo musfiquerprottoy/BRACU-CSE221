@@ -1,0 +1,1 @@
+N = list(map(int, input.split().strip()))

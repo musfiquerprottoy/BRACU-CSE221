@@ -1,12 +1,8 @@
-import numpy as np
+elem = int(input())
+arr = list(map(int, input().split()))
 
-N = int(input())
-K = int(input())
+n = len(arr)
+srtd = False 
 
-arr = np.zeros(N, dtype=int)
-
-for i in range(N): 
-    arr[i] = int(input())
-
-arr2 = arr[::-1]
-print(*arr2[N-K:])
+while not srtd: 
+    srtd = True 

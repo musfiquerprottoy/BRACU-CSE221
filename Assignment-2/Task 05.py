@@ -1,25 +1,15 @@
+import bisect
 import sys
-from bisect import bisect_left, bisect_right
 
-def count_numbers_in_range(n, q, a, queries):
-    a.sort()  # Ensure the list is sorted before using bisect
-    results = []
-    for x, y in queries:
-        left_index = bisect_left(a, x)
-        right_index = bisect_right(a, y)
-        results.append(right_index - left_index)
-    return results
+# Read n and q
+n, q = map(int, input().split())
 
-# Read input
-input = sys.stdin.read
-data = input().splitlines()
+# Read sorted array
+arr = list(map(int, input().split()))
 
-n, q = map(int, data[0].split())
-a = list(map(int, data[1].split()))
-queries = [tuple(map(int, line.split())) for line in data[2:2 + q]]
-
-# Get results
-results = count_numbers_in_range(n, q, a, queries)
-
-# Print results
-print("\n".join(map(str, results)))
+# Process each query
+for _ in range(q):
+    x, y = map(int, input().split())
+    left = bisect.bisect_left(arr, x)
+    right = bisect.bisect_right(arr, y)
+    print(right - left)

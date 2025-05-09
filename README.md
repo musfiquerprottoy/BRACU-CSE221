@@ -1,6 +1,4 @@
-# CSE221: Algorithm Analysis & Design
-
-Offered:
+# CSE221: Algorithm Analysis & Design - BRAC UNIVERSITY
 
 Pre-requisite: CSE220
 
